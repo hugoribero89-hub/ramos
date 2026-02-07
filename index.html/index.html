@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramos Soluções Financeiras</title>
+  <meta name="description" content="Ramos Soluções Financeiras – Crédito, financiamentos e consultoria financeira com segurança e agilidade." />
+  <style>
+    :root {
+      --red: #d71920;
+      --dark: #1f2933;
+      --gray: #6b7280;
+      --light: #f9fafb;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-content img {
+      height: 68px;
+    }
+
+    .btn {
+      background: var(--red);
+      color: var(--white);
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #d71920, #b9151b);
+      color: var(--white);
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      gap: 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .services {
+      background: var(--light);
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .form-section {
+      background: var(--white);
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .cta {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    footer {
+      background: var(--white);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: var(--gray);
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <img src="ramos-logo.png" alt="Ramos Soluções Financeiras" />
+      <a href="#form" class="btn">Fale Conosco</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <h1>Ramos Soluções Financeiras</h1>
+        <p>Crédito, financiamentos e consultoria financeira com segurança, transparência e rapidez.</p>
+        <a href="#form" class="btn">Faça sua Simulação</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:40px;">Nossos Serviços</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>Crédito Personalizado</h3>
+          <p>Opções de crédito de acordo com o seu perfil financeiro.</p>
+        </div>
+        <div class="card">
+          <h3>Financiamentos</h3>
+          <p>Soluções rápidas para veículos, imóveis e projetos.</p>
+        </div>
+        <div class="card">
+          <h3>Consultoria Financeira</h3>
+          <p>Planejamento e orientação para decisões seguras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form" class="form-section">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:30px;">Solicite seu Atendimento</h2>
+      <form onsubmit="enviarFormulario(event)">
+        <input type="text" placeholder="Nome completo" required />
+        <input type="tel" placeholder="Telefone / WhatsApp" required />
+        <input type="email" placeholder="E-mail" required />
+        <select required>
+          <option value="">Selecione o serviço</option>
+          <option>Crédito pessoal</option>
+          <option>Financiamento</option>
+          <option>Consultoria financeira</option>
+        </select>
+        <textarea rows="4" placeholder="Descreva sua necessidade"></textarea>
+        <button type="submit" class="btn">Enviar Solicitação</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Atendimento rápido e seguro</h2>
+      <p>Entre em contato agora mesmo com a Ramos Soluções Financeiras.</p>
+      <br />
+      <a href="https://wa.me/5591988158247" class="btn" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="ano"></span> Ramos Soluções Financeiras. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById("ano").innerText = new Date().getFullYear();
+
+    function enviarFormulario(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const dados = {
+        nome: form[0].value,
+        telefone: form[1].value,
+        email: form[2].value,
+        servico: form[3].value,
+        mensagem: form[4].value
+      };
+
+      const assunto = encodeURIComponent("Novo contato – Ramos Soluções Financeiras");
+      const corpo = encodeURIComponent(
+        `Nome: ${dados.nome}
+Telefone: ${dados.telefone}
+E-mail: ${dados.email}
+Serviço: ${dados.servico}
+Mensagem: ${dados.mensagem}`
+      );
+
+      window.location.href = `mailto:Uchoar08@gmail.com?subject=${assunto}&body=${corpo}`;
+    }
+  </script>
+
+</body>
+</html>
