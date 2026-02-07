@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Levantamento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .options label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #0a3cff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0026b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Levantamento</h1>
+
+  <form>
+
+    <div class="field">
+      <label>1. Data</label>
+      <input type="date" required>
+    </div>
+
+    <div class="field">
+      <label>2. Nome do cliente</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field">
+      <label>3. Consultor / Gerente responsável</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field options">
+      <label>4. Bem de interesse</label>
+      <label><input type="checkbox"> Hatch</label>
+      <label><input type="checkbox"> Sedã</label>
+      <label><input type="checkbox"> Pick-up</label>
+      <label><input type="checkbox"> Caminhonete</label>
+      <label><input type="checkbox"> Caminhão</label>
+      <label><input type="checkbox"> Trator</label>
+      <label><input type="checkbox"> Crédito Rural / Máquinas Pesadas</label>
+    </div>
+
+    <div class="field">
+      <label>5. Qual a Marca / Modelo e Ano?</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field options">
+      <label>6. Qual será o uso do veículo?</label>
+      <label><input type="checkbox"> Pessoal</label>
+      <label><input type="checkbox"> Aplicativos</label>
+      <label><input type="checkbox"> Trabalho</label>
+      <label><input type="checkbox"> Outros</label>
+    </div>
+
+    <div class="field options">
+      <label>7. Você possui outros veículos?</label>
+      <label><input type="radio" name="outros"> Sim</label>
+      <label><input type="radio" name="outros"> Não</label>
+    </div>
+
+    <div class="field options">
+      <label>8. Você possui alguma restrição?</label>
+      <label><input type="radio" name="restricao"> Sim</label>
+      <label><input type="radio" name="restricao"> Não</label>
+    </div>
+
+    <div class="field">
+      <label>9. Você sabe sua pontuação no score?</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field options">
+      <label>10. Já comprou algum bem? Se sim, como?</label>
+      <label><input type="checkbox"> Financiamento</label>
+      <label><input type="checkbox"> Consórcio</label>
+      <label><input type="checkbox"> Cartão de crédito</label>
+      <label><input type="checkbox"> Empréstimo</label>
+      <label><input type="checkbox"> Crediário</label>
+      <label><input type="checkbox"> Não, somente à vista</label>
+    </div>
+
+    <div class="field options">
+      <label>11. Já está quitado?</label>
+      <label><input type="radio" name="quitado"> Sim</label>
+      <label><input type="radio" name="quitado"> Não</label>
+    </div>
+
+    <div class="field">
+      <label>12. Faixa de preço</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field">
+      <label>13. Qual será o valor de investimento?</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field">
+      <label>14. Qual seria o valor ideal de entrada?</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field options">
+      <label>16. Você tem urgência para adquirir?</label>
+      <label><input type="radio" name="urgencia"> Sim</label>
+      <label><input type="radio" name="urgencia"> Não</label>
+    </div>
+
+    <div class="field">
+      <label>17. Quem decide na compra?</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field">
+      <label>18. CPF</label>
+      <input type="text" required>
+    </div>
+
+    <div class="field">
+      <label>19. RG</label>
+      <input type="text" required>
+    </div>
+
+    <button type="submit">Enviar Levantamento</button>
+
+  </form>
+</div>
+
+</body>
+</html>
